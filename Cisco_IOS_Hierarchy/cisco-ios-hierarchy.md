@@ -122,7 +122,7 @@ Global Config (config)
    │  exit ↑ (one level)   end or Ctrl+Z (jump to Privileged EXEC)
 Specific Config Submode (config-if, config-line, config-router, ...)
 ```
-![alt text](image.png)
+![alt text](ios-hierarchy-image.png)
 ### Key Movement Commands
 
 | Command | Action |
