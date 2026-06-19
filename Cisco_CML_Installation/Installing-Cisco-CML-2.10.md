@@ -83,8 +83,6 @@ isolation details** and set **Memory integrity** to **Off**.
 
 ![Windows Security Core isolation with Memory integrity off](image-3.png)
 
-*Disabling Memory integrity under Core isolation in Windows Security.*
-
 ### Step 6 — Reboot and verify BIOS settings
 
 1. **Reboot your PC** to apply the Hyper-V and Memory integrity changes.
@@ -174,10 +172,3 @@ In the CML web console, use **Copy Refplat ISO** to copy the node and image
 definitions from the attached refplat ISO onto the appliance's disk.
 
 ![Copy Refplat ISO control in the CML web console](image-12.png)
-
-## Others
-
-For detailed, version-specific configuration, licensing, and node management,
-refer to the official Cisco Modeling Labs documentation and installation guide
-for your release.
-
