@@ -37,7 +37,7 @@ CML expects a minimum allocation for the virtual machine.
 
 ---
 
-## Part 1 — Import and Configure the Appliance
+## Part 1 — Import and Configure the VM
 
 ### Step 1 — Import the OVA into VMware Workstation Pro
 
@@ -175,4 +175,3 @@ In the CML web console, use **Copy Refplat ISO** to copy the node and image
 definitions from the attached refplat ISO onto the appliance's disk.
 
 ![Copy Refplat ISO control in the CML web console](images/image-12.png)
-
