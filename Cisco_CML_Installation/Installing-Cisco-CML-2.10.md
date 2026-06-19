@@ -46,7 +46,7 @@ CML expects a minimum allocation for the virtual machine.
 2. Double-click the `.ova` file to begin importing it into VMware Workstation Pro.
 3. In the **Import Virtual Machine** dialog, provide a name and a local storage
 path for the new virtual machine, then click **Import**.
-![Import Virtual Machine](image-1.png)
+![Import Virtual Machine](images/image-1.png)
 
 ### Step 2 — Edit the virtual machine settings
 
@@ -54,15 +54,15 @@ After the import completes, edit the virtual machine settings so they meet the
 requirements listed in [Host Requirements](#host-requirements) (at least 8 GB
 of memory and 4+ CPU cores).
 
-![Memory](image-5.png)
-![Processors](image-4.png)
+![Memory](images/image-5.png)
+![Processors](images/image-4.png)
 
 ### Step 3 — Enable Intel VT-x
 
 In the VM's processor settings, under **Virtualization engine**, enable
 **Virtualize Intel VT-x/EPT or AMD-V/RVI**.
 
-![Virtualization engine setting with Virtualize Intel VT-x/EPT enabled](image-2.png)
+![Virtualization engine setting with Virtualize Intel VT-x/EPT enabled](images/image-2.png)
 
 ### Step 4 — Disable Hyper-V (common VMware conflict)
 
@@ -81,7 +81,7 @@ Memory integrity (Core isolation) is another virtualization-based feature that
 can conflict with VMware. Go to **Windows Security → Device security → Core
 isolation details** and set **Memory integrity** to **Off**.
 
-![Windows Security Core isolation with Memory integrity off](image-3.png)
+![Windows Security Core isolation with Memory integrity off](images/image-3.png)
 
 ### Step 6 — Reboot and verify BIOS settings
 
@@ -110,7 +110,7 @@ Once your PC has rebooted:
 5. Select **Use ISO image file**, then **Browse** and select your
    `refplat_*-fcs-iso` disc image.
 
-![CD/DVD settings connected to the FCS reference platform ISO](image-6.png)
+![CD/DVD settings connected to the FCS reference platform ISO](images/image-6.png)
 
 ### Step 8 — Power on and complete setup
 
@@ -131,7 +131,7 @@ system, then loads the supplemental reference platform.
 2. Select the hard disk and use **Expand** to increase its capacity.
    A maximum size of **50–100 GB** is recommended.
 
-![VMware Expand Disk Capacity dialog set to 100 GB](image-7.png)
+![VMware Expand Disk Capacity dialog set to 100 GB](images/image-7.png)
 
 > **Important:** Expanding the disk in VMware only adds unallocated space.
 > You must still extend the partition and file system inside the CML guest (next steps).
@@ -142,21 +142,21 @@ Browse to the CML web console (the system management/Cockpit interface) and go
 to the **Storage** section. The newly added capacity appears as **Free space**
 on the `sda` disk.
 
-![Cockpit Storage view showing free space on the sda disk](image-8.png)
+![Cockpit Storage view showing free space on the sda disk](images/image-8.png)
 
 ### Step 3 — Add the unpartitioned space to the volume group
 
 In the Storage view, add the unpartitioned space on `/dev/sda` to the existing
 LVM volume group.
 
-![Cockpit Add disks dialog](image-9.png)
+![Cockpit Add disks dialog](images/image-9.png)
 
 ### Step 4 — Grow the logical volume
 
 Select the `lv_var` logical volume (where CML stores node images and lab data)
 and **Grow** it to consume the newly available space.
 
-![Grow logical volume dialog for lv_var](image-10.png)
+![Grow logical volume dialog for lv_var](images/image-10.png)
 
 ### Step 5 — Attach the supplemental ISO
 
@@ -164,11 +164,11 @@ Back in VMware, edit the VM settings and connect the **CD/DVD** drive to the
 `refplat_*-supplemental-iso` image, the same way you attached the FCS ISO
 earlier (check **Connected**, then **Use ISO image file → Browse**).
 
-![CD/DVD settings connected to the supplemental reference platform ISO](image-11.png)
+![CD/DVD settings connected to the supplemental reference platform ISO](images/image-11.png)
 
 ### Step 6 — Copy the reference platform definitions to disk
 
 In the CML web console, use **Copy Refplat ISO** to copy the node and image
 definitions from the attached refplat ISO onto the appliance's disk.
 
-![Copy Refplat ISO control in the CML web console](image-12.png)
+![Copy Refplat ISO control in the CML web console](images/image-12.png)
