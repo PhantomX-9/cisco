@@ -42,10 +42,13 @@ CML expects a minimum allocation for the virtual machine.
 ### Step 1 — Import the OVA into VMware Workstation Pro
 
 1. Navigate to the folder where you downloaded the CML OVA file.
+
 ![Downloaded CML OVA and reference platform ISOs in File Explorer](images/image-0.png)
+
 2. Double-click the `.ova` file to begin importing it into VMware Workstation Pro.
 3. In the **Import Virtual Machine** dialog, provide a name and a local storage
 path for the new virtual machine, then click **Import**.
+
 ![Import Virtual Machine](images/image-1.png)
 
 ### Step 2 — Edit the virtual machine settings
@@ -172,3 +175,4 @@ In the CML web console, use **Copy Refplat ISO** to copy the node and image
 definitions from the attached refplat ISO onto the appliance's disk.
 
 ![Copy Refplat ISO control in the CML web console](images/image-12.png)
+
