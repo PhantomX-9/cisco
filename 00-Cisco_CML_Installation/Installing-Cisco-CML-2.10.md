@@ -124,6 +124,8 @@ initial CML setup.
 
 ## Part 2 — (Optional) Expand Storage and Add Supplemental Nodes
 
+**You can avoid this by expanding the disk before you setup your VM**
+
 The default disk may be too small once you import additional node and image
 definitions. This section expands the virtual disk and grows the guest file
 system, then loads the supplemental reference platform.
