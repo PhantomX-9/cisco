@@ -78,7 +78,7 @@ bcdedit /set hypervisorlaunchtype off
 
 > **Note:** This change takes effect after a reboot (see Step 6).
 
-### Step 6: Turn off Memory Integrity in Windows Security
+### Step 5: Turn off Memory Integrity in Windows Security
 
 Memory integrity (Core isolation) is another virtualization-based feature that
 can conflict with VMware. Go to **Windows Security → Device security → Core
@@ -119,7 +119,7 @@ Once your PC has rebooted:
 
 1. Expand your default Disk to 50GB ~ 100 GB: Virtual Machine Setting → Hard Disk → Expand
 
-> Highly recommend you do this step — if you need to expand the disk later on, you'll have to do it the harder way.
+> I highly recommend you do this step — if you need to expand the disk later on, you'll have to do it the harder way.
 
 2. Power on the virtual machine and follow the on-screen prompts to complete the
 initial CML setup.
