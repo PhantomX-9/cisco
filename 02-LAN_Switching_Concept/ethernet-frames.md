@@ -1,4 +1,4 @@
-# Analyzing Ethernet LAN Switching
+# Ethernet LAN Switching: ARP Resolution, Broadcast and Unicast Frame Types, and Unknown Unicast Flooding
 
 ## The setup
 
@@ -49,13 +49,13 @@ So by the time any unicast frame needed forwarding, the switch already knew wher
 
 When the switch receives a unicast frame whose destination MAC is not in its MAC table. The catch is that the **PC's ARP cache** and the **switch's MAC table** are completely independent and **age out on their own separate timers.** This mismatch is what trigger the switch to flood unknown unicast.
 
-#### Picture this
+### Picture this:
  The PC and router have been quiet for a while:
 
 1. The switch's MAC table entry for the router ages out (300s passed).
 2. But the PC's ARP cache still holds the router's MAC (its timer hasn't expired).
 3. The PC now wants to send data → it skips ARP (it already has the MAC) and sends a unicast frame straight to the router's MAC.
-4. The switch looks up that destination MAC... not in the table → unknown unicast → flood out all ports.
+4. The switch looks up the destination MAC, but it's not in the table. This is treated as an **unknown unicast**, so the switch floods the frame out **all ports**.
 5. The router receives it and replies; the switch re-learns the router's port, and the next frame is a known unicast again.
 
 Unknown unicast shows up mainly after idle periods (table aged out) or with asymmetric traffic where the switch only ever hears one side.
